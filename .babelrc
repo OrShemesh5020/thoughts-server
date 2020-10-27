@@ -1,0 +1,19 @@
+{
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": 3
+        }
+      ]
+    ],
+    "plugins": [],
+    "sourceMaps": "inline",
+    "retainLines": true,
+    "env": {
+      "test": {
+          "plugins": ["rewire"]
+      }
+    }
+  }

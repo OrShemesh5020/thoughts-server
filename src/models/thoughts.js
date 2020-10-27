@@ -1,7 +1,7 @@
 const sequelize = require("../config/postgres-connection").sequelize;
 const { DataTypes } = require("sequelize");
 const { TYPES } = require("../constants/thoughts");
-const Group = require("./groups");
+// const Group = require("./groups");
 const Thought = sequelize.define("Thoughts", {
   id: {
     primaryKey: true,

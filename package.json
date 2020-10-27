@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start server.js -- --interpreter babel-node && npm run logs",
+    "start": "sequelize-cli db:migrate --config src/config/database-config.js && pm2 start server.js -- --interpreter babel-node && npm run logs",
     "stop": "pm2 delete all",
     "logs": "pm2 logs",
     "restart": "npm stop && npm start"
@@ -19,10 +19,12 @@
     "pg-hstore": "^2.3.3",
     "pm2": "^4.5.0",
     "postgres": "^1.0.2",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
-    "@babel/node": "^7.10.5"
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.12.1"
   }
 }
