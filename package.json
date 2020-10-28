@@ -8,7 +8,9 @@
     "start": "sequelize-cli db:migrate --config src/config/database-config.js && pm2 start server.js -- --interpreter babel-node && npm run logs",
     "stop": "pm2 delete all",
     "logs": "pm2 logs",
-    "restart": "npm stop && npm start"
+    "restart": "npm stop && npm start", 
+    "migrate-undo": "sequelize-cli db:migrate:undo --config src/config/database-config.js",
+    "migrate-create":"sequelize-cli migration:create"
   },
   "author": "",
   "license": "ISC",

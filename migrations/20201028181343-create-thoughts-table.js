@@ -1,21 +1,20 @@
 "use strict";
-const { sequelize } = require("../src/config/postgres-connection");
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {
+  up: async (queryInterface, Sequelize) => {
     return Promise.resolve(
       queryInterface.createTable({
         schema: "thoughts",
-        tableName: "Categories",
+        tableName: "Thoughts",
       })
     );
   },
 
-  down: (queryInterface, Sequelize) => {
+  down: async (queryInterface, Sequelize) => {
     return Promise.resolve(
       queryInterface.dropTable({
         schema: "thoughts",
-        tableName: "Categories",
+        tableName: "Thoughts",
       })
     );
   },

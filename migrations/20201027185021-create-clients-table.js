@@ -3,19 +3,23 @@ const { sequelize } = require("../src/config/postgres-connection");
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return Promise.resolve(
-      queryInterface.createTable({
-        schema: "thoughts",
-        tableName: "Categories",
-      })
-    );
+    try {
+      return new Promise((resolve) => {
+        return queryInterface.createTable({
+          schema: "thoughts",
+          tableName: "Clients",
+        });
+      }).catch((error) => console.log(error));
+    } catch (error) {
+      console.log(error);
+    }
   },
 
   down: (queryInterface, Sequelize) => {
     return Promise.resolve(
       queryInterface.dropTable({
         schema: "thoughts",
-        tableName: "Categories",
+        tableName: "Clients",
       })
     );
   },
