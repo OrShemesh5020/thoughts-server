@@ -1,19 +1,4 @@
 {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "useBuiltIns": "entry",
-          "corejs": 3
-        }
-      ]
-    ],
-    "plugins": [],
-    "sourceMaps": "inline",
-    "retainLines": true,
-    "env": {
-      "test": {
-          "plugins": ["rewire"]
-      }
-    }
-  }
+  "presets": ["es2015", "stage-2"],
+  "plugins": []
+}

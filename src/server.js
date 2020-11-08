@@ -5,8 +5,8 @@ app.listen(4000, () => {
 });
 
 app.get("/status", (req, res) => {
-  const Thought = require("./src/models/thoughts");
+  const Thought = require("./models/thoughts");
   res.sendStatus(200);
 });
 require("dotenv").config();
-const connection = require("./src/config/postgres-connection");
+const connection = require("./config/postgres-connection");
